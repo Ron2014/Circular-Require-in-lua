@@ -1,13 +1,3 @@
---[[
-    面试题（候选人蹂躏）指南（层层深入）：
-    1. 用 lua 脚本语言实现面向对象
-    2. 有没有阅读过 lua 源码
-    3. require 机制是如何实现的
-    4. 如何避免循环引用造成的死循环：A文件 require B文件，B文件 require A文件
-    5. 如何解决继承关系中出现的循环引用：上题环境中，B文件有个类 ClassB，其父类 ClassA 定义在A文件中。
-    6. 对于第5题给出的方案，评价空间复杂度，并尝试改进
-]]
-
 local __require = require
 local checkLoading = {}
 
