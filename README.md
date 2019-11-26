@@ -317,7 +317,7 @@ CClassA.prototype.__index = CClassA.prototype
 做的是local obj = CClassD()后obj[k]的访问，也就是类的成员函数都写到prototype里了。
 这个问题的关键就在于，我们如何将一张临时的空表，变成原来的CClassA.prototype。也就是说，需要重写setmetatable，如果元表mt是一张加载中的表，在__index中重新设置元表。
 
-示例见 circle_require4ts0.lua
+示例见 [circle_require4ts0.lua](https://github.com/Ron2014/Circular-Require-in-lua/blob/master/circle_require4ts0.lua)
 
 
 ### 优化
@@ -326,7 +326,7 @@ CClassA.prototype.__index = CClassA.prototype
 
 这里使用将两张表合并成一张表的 luaer trick 做法，并且对于 prototype 临时表的处理避免修改 setmetatable。
 
-最终成品见 circle_require4ts1.lua ，注释中【】的内容都是知识点。
+最终成品见 [circle_require4ts1.lua](https://github.com/Ron2014/Circular-Require-in-lua/blob/master/circle_require4ts1.lua) ，注释中【】的内容都是知识点。
 
 ## 总结
 
